@@ -105,7 +105,7 @@ void Output::Record()
    k.push_back(fTrack->GetKineticEnergy()/CLHEP::keV);
    l.push_back(fTrack->GetTrackLength()/CLHEP::mm);
 
-   t0.push_back(fTrack->GetGlobalTime()/CLHEP::ns);
+   //t0.push_back(fTrack->GetGlobalTime()/CLHEP::ns);
    x0.push_back(fTrack->GetPosition().x()/CLHEP::mm);
    y0.push_back(fTrack->GetPosition().y()/CLHEP::mm);
    z0.push_back(fTrack->GetPosition().z()/CLHEP::mm);
@@ -115,7 +115,7 @@ void Output::Record()
    x.push_back(pos.x()/CLHEP::mm);
    y.push_back(pos.y()/CLHEP::mm);
    z.push_back(pos.z()/CLHEP::mm);
-   t.push_back(fTrack->GetLocalTime()/CLHEP::ns);
+   //t.push_back(fTrack->GetLocalTime()/CLHEP::ns);
 
    if (e.back()>0 && handle->GetVolume()->GetName().contains("(S)")) {
       if (et.size()<(unsigned int)copyNo+1) et.resize((unsigned int)copyNo+1);
